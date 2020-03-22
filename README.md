@@ -1,0 +1,1 @@
+# ecr-image-scan-findings-to-slack
