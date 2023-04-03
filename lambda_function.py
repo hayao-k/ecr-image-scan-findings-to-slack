@@ -62,9 +62,9 @@ def get_params(scan_result):
                 'color': text_properties['color'],
                 'title': f'''{text_properties['icon']} {
                     scan_result['repositoryName']}:{
-                    scan_result['imageTags'][0]}''',
-                'title_link': f'''https://console.aws.amazon.com/ecr/repositories/{
-                    scan_result['repositoryName']}/image/{
+                    scan_result['image-tags'][0]}''',
+                'title_link': f'''https://{region}.console.aws.amazon.com/ecr/repositories/private/{
+                    scan_result['registryId']}/{scan_result['repositoryName']}/_/image/{
                     scan_result['imageDigest']}/scan-results?region={region}''',
                 'text': f'''{description}\nImage Scan Completed at {
                     complete_at}\nVulnerability Source Updated at {source_update_at}''',
